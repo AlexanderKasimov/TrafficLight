@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject collisionVFXPrefab;
+
+
     private Rigidbody2D rb;
 
     private Color32 color;
@@ -19,7 +23,7 @@ public class Car : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
 
     }
@@ -67,6 +71,7 @@ public class Car : MonoBehaviour
         if (other.CompareTag("Car"))
         {
             GameManager.instance.Lose();
+            Instantiate(collisionVFXPrefab, transform.position, Quaternion.identity);
         }
         if (other.CompareTag("Finish"))
         {

@@ -16,6 +16,18 @@ public class GameManager : MonoBehaviour
 
     public int carsFinished = 0;
 
+    [SerializeField]
+    private GameObject winScreen;
+    [SerializeField]
+    private GameObject loseScreen;
+
+    private bool isLevelEnded = false;
+    [SerializeField]
+    private List<string> levels;
+
+    [SerializeField]
+    private int curLevelIndex = 0;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -56,13 +68,20 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
-        Debug.Log("Lost");
+        if (!isLevelEnded)
+        {
+            isLevelEnded = true;
+            TogglePause(true);
+            loseScreen.SetActive(true);
+            Debug.Log("Lost");
+        }
+
     }
 
     public void CarFinished()
     {
-        carsFinished++;  
-        if (CheckIfWon()) 
+        carsFinished++;
+        if (CheckIfWon())
         {
             Win();
         }
@@ -75,6 +94,24 @@ public class GameManager : MonoBehaviour
 
     private void Win()
     {
-        Debug.Log("Win");
+        if (!isLevelEnded)
+        {
+            isLevelEnded = true;
+            TogglePause(true);
+            winScreen.SetActive(true);
+            Debug.Log("Win");
+        }
+    }
+
+    public void TogglePause(bool isPaused)
+    {
+        Time.timeScale = isPaused ? 0 : 1;
+    }
+
+    public string GetNextSceneName()
+    {
+        curLevelIndex++;
+        curLevelIndex = curLevelIndex % levels.Count;
+        return levels[curLevelIndex];
     }
 }

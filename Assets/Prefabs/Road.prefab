@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6557302748642446765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.68, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6557302749665254371}
@@ -47,7 +47,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4279308789
   carPrefab: {fileID: 8312088064380824696, guid: 5f05074f96499734fac55669cf2a2cd7, type: 3}
-  timeBetweenCarSpawns: 3
+  timeBetweenCarSpawns: 4
 --- !u!1 &6557302748877455653
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6557302748877455653}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.17, y: 0, z: 0}
+  m_LocalPosition: {x: 27.23, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6557302749665254371}
@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 6557302750350415143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 17.183048, y: 1, z: 1}
+  m_LocalScale: {x: 28.137243, y: 1.825, z: 1}
   m_Children: []
   m_Father: {fileID: 6557302749665254371}
   m_RootOrder: 0
@@ -254,11 +254,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: f041a1703957a7545af78a5035eb4906, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.18823531, g: 0.17254902, b: 0.18039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
